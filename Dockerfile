@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y \
 	yarn
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
+RUN bundle update nokogiri marcel mimemagic
 RUN bundle install
